@@ -1,0 +1,111 @@
+/* styles.css */
+
+#content {
+  display: none;
+}
+
+#welcome-message-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  background-color: rgb(28, 39, 43);
+}
+
+#terminal {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#boot-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 110px;
+}
+
+#boot-text {
+  color: lime;
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  text-align: left;
+  overflow-y: auto;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.blinking-cursor {
+  color: lime;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+#continue-button {
+  color: lime;
+  font-size: 1.5vw;
+  padding: 1vh 2vw;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-top: 2vh;
+  background-color: rgb(28, 39, 43);
+  animation: fadeIn 30s forwards;
+  text-transform: lowercase;
+  align-self: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  #boot-text {
+    font-size: 2.5vw;
+  }
+  #continue-button {
+    font-size: 3.5vw;
+    padding: 2vh 4vw;
+  }
+
+  #boot-text-container {
+    min-height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  #boot-text {
+    font-size: 3.2vw;
+  }
+  #continue-button {
+    font-size: 4vw;
+  }
+
+  #boot-text-container {
+    min-height: 90px;
+  }
+}

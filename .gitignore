@@ -1,0 +1,6 @@
+# .gitignore
+
+.vercel/
+vercel/
+/TODO.md
+trash/
