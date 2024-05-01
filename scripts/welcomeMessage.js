@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.onload = () => {
     // glitchEffect();
-    buttonEvent();
     typeLine();
+    buttonEvent();
   };
 });
