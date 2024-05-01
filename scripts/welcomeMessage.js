@@ -12,16 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
   let lineIndex = 0;
   let charIndex = 0;
   const bootTextElement = document.getElementById("boot-text");
+  const typingSpeed = 50;
+  const charsPerInterval = 5;
 
   const typeLine = () => {
     if (lineIndex < terminalText.length) {
       const currentLine = terminalText[lineIndex];
       if (charIndex < currentLine.length) {
-        bootTextElement.innerHTML += currentLine[charIndex++];
-        setTimeout(typeLine, 100);
+        let textToAdd = currentLine.slice(
+          charIndex,
+          charIndex + charsPerInterval
+        );
+        bootTextElement.innerHTML += textToAdd;
+        charIndex += charsPerInterval;
+        setTimeout(typeLine, typingSpeed);
       } else {
         updateIndex();
-        setTimeout(typeLine, lineIndex < terminalText.length ? 1000 : 0);
+        setTimeout(typeLine, 1000);
       }
     }
   };
@@ -93,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.onload = () => {
     // glitchEffect();
-    typeLine();
     buttonEvent();
+    typeLine();
   };
 });
