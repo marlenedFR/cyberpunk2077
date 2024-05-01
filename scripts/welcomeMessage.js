@@ -53,47 +53,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // const glitchEffect = () => {
-  //   const glitchElement = document.querySelector(".btn-glitch");
-  //   const { startGlitch, stopGlitch } = PowerGlitch.glitch(glitchElement, {
-  //     playMode: "always",
-  //     hideOverflow: false,
-  //     timing: {
-  //       duration: 2000,
-  //     },
-  //     glitchTimeSpan: {
-  //       start: 0.5,
-  //       end: 0.7,
-  //     },
-  //     shake: {
-  //       velocity: 0.2,
-  //       amplitudeX: 0.1,
-  //       amplitudeY: 0.1,
-  //     },
-  //     slice: {
-  //       count: 6,
-  //       velocity: 15,
-  //       minHeight: 0.02,
-  //       maxHeight: 0.15,
-  //       hueRotate: true,
-  //     },
-  //     pulse: false,
-  //   });
+  const glitchEffect = () => {
+    const glitchElement = document.querySelector(".btn-glitch");
+    const { startGlitch, stopGlitch } = PowerGlitch.glitch(glitchElement, {
+      playMode: "always",
+      hideOverflow: false,
+      timing: {
+        duration: 2000,
+      },
+      glitchTimeSpan: {
+        start: 0.5,
+        end: 0.7,
+      },
+      shake: {
+        velocity: 0.2,
+        amplitudeX: 0.1,
+        amplitudeY: 0.1,
+      },
+      slice: {
+        count: 6,
+        velocity: 15,
+        minHeight: 0.02,
+        maxHeight: 0.15,
+        hueRotate: true,
+      },
+      pulse: false,
+    });
 
-  //   const startGlitchCycle = () => {
-  //     startGlitch();
+    const startGlitchCycle = () => {
+      startGlitch();
+      setTimeout(() => {
+        stopGlitch();
+        setTimeout(startGlitchCycle, 3000);
+      }, 2000);
+    };
 
-  //     setTimeout(() => {
-  //       stopGlitch();
-  //       setTimeout(startGlitchCycle, 4000);
-  //     }, 2000);
-  //   };
-
-  //   startGlitchCycle();
-  // };
+    startGlitchCycle();
+  };
 
   window.onload = () => {
-    // glitchEffect();
+    glitchEffect();
     buttonEvent();
     typeLine();
   };

@@ -9,17 +9,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  transition-duration: 200ms;
-  z-index: 1;
+  /* transition-duration: 200ms; */
+  /* z-index: 1; */
 }
 
 #background-logo {
   background-repeat: no-repeat;
   width: 794px;
   height: 337px;
-  z-index: 2;
+  /* z-index: 2; */
   transition-duration: 200ms;
-  animation: background-logo-in-animation cubic-bezier(0.38, 1.89, 0.24, 1) 3s;
+  animation: desktop-fade-in-animation cubic-bezier(0.38, 1.89, 0.24, 1) 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

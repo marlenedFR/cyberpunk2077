@@ -1,4 +1,4 @@
-@keyframes taskbar_animation {
+@keyframes taskbar-animation {
   from {
     -ms-transform: translate(0, -150%);
     transform: translate(0, -150%);
