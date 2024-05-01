@@ -28,7 +28,7 @@
 
 #boot-text-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   min-height: 150px;
@@ -41,6 +41,13 @@
   font-size: 18px;
   text-align: left;
   overflow-y: auto;
+  filter: drop-shadow(0 0 5px lime);
+}
+
+#display-content {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  color: lime;
 }
 
 @keyframes blink {
@@ -61,36 +68,9 @@
   animation: blink 1s infinite;
 }
 
-#continue-button {
-  color: lime;
-  font-size: 1.5vw;
-  padding: 1vh 2vw;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  margin-top: 2vh;
-  background-color: rgb(28, 39, 43);
-  animation: fadeIn 3s forwards;
-  text-transform: lowercase;
-  align-self: center;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @media (max-width: 768px) {
   #boot-text {
     font-size: 2.5vw;
-  }
-  #continue-button {
-    font-size: 3.5vw;
-    padding: 2vh 4vw;
   }
 
   #boot-text-container {
@@ -102,9 +82,6 @@
 @media (max-width: 480px) {
   #boot-text {
     font-size: 3.2vw;
-  }
-  #continue-button {
-    font-size: 4vw;
   }
 
   #boot-text-container {
