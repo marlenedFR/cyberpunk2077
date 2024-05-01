@@ -3,7 +3,7 @@
   src: url("../../assets/fonts/Cyberpunk-Regular.ttf") format("truetype");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Blender Pro Book";
   src: url("https://db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.eot");
   src: url("https://db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.eot?#iefix")
@@ -16,10 +16,10 @@
       format("truetype"),
     url("https://db.onlinewebfonts.com/t/335787aa6f57d71cabe8eb5dc89c6d6b.svg#Blender Pro Book")
       format("svg");
-}
+} */
 
 * {
-  font-family: "Blender Pro Book", sans-serif;
+  /* font-family: "Blender Pro Book", sans-serif; */
   border: 0;
   box-sizing: border-box;
   margin: 0;
