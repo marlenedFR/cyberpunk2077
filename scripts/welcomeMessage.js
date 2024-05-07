@@ -12,7 +12,7 @@ const createDisplayContentButton = () => {
 let lineIndex = 0;
 let charIndex = 0;
 const bootTextElement = document.getElementById("boot-text");
-const typingSpeed = 100;
+const typingSpeed = 60;
 const charsPerInterval = 1;
 const terminalText = [
   "Initialisation du système...",

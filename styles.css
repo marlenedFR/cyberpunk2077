@@ -1,5 +1,9 @@
 /* styles.css */
 
+a {
+  font-size: inherit;
+}
+
 #content {
   display: none;
 }
@@ -46,7 +50,7 @@
 
 #display-content {
   font-family: "Courier New", Courier, monospace;
-  font-size: 18px;
+  /* font-size: 18px; */
   color: lime;
 }
 
@@ -75,7 +79,6 @@
 
   #boot-text-container {
     min-height: 150px;
-    /* border: 2px solid red; */
   }
 }
 
